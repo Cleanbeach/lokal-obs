@@ -8,9 +8,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   source:
-    repoURL: https://github.com/Cleanbeach/lok-obs.git
+    repoURL: https://github.com/Cleanbeach/lokal-obs.git
     targetRevision: main
-    path: .
+    path: envs/dev/.
   project: default
   syncPolicy:
     automated:
