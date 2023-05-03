@@ -15,7 +15,7 @@ spec:
       valueFiles:
         - env/dev/apps/grafana/values.yaml
         # - env/dev/apps/grafana-loki/values.yaml
-        - env/dev/apps/grafana-tempo/values.yaml
+        # - env/dev/apps/grafana-tempo/values.yaml
         # - env/dev/apps/grafana-mimir/values.yaml
         # - env/dev/apps/otel-collector/values.yaml        
 
