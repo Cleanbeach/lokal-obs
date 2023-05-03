@@ -1,26 +1,28 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: obs-apps-in-apps
-  namespace: argocd
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-  source:
-    repoURL: https://github.com/cleanbeach/lokal-obs.git
-    path: envs/dev/apps/
-    targetRevision: main
-    helm:
-      valueFiles:
-        - grafana/values.yaml
-        # - env/dev/apps/grafana-loki/values.yaml
-        # - env/dev/apps/grafana-tempo/values.yaml
-        # - env/dev/apps/grafana-mimir/values.yaml
-        # - env/dev/apps/otel-collector/values.yaml        
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: obs-apps-in-apps
+#   namespace: argocd
+# spec:
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: default
+#   source:
+#     repoURL: https://github.com/cleanbeach/lokal-obs.git
+#     path: envs/dev/apps/
+#     targetRevision: main
+#     helm:
+#       valueFiles:
+#         - grafana/values.yaml
+#         # - env/dev/apps/grafana-loki/values.yaml
+#         # - env/dev/apps/grafana-tempo/values.yaml
+#         # - env/dev/apps/grafana-mimir/values.yaml
+#         # - env/dev/apps/otel-collector/values.yaml        
 
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+#   project: default
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+
+# # argocd app create lok-obs --repo https://github.com/cleanbeach/lokal-obs.git --path envs/dev/apps/ --dest-server https://kubernetes.default.svc --dest-namespace default
