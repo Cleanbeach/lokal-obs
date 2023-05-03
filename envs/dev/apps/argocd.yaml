@@ -8,11 +8,11 @@ spec:
     namespace: default
   source:
     repoURL: https://github.com/cleanbeach/lokal-obs.git
-    path: env/dev/apps
+    path: env/dev/apps/
     targetRevision: main
     helm:
       valueFiles:
-        - values.yaml
+        - env/dev/apps/grafana/values.yaml
   project: default
   syncPolicy:
     automated:
