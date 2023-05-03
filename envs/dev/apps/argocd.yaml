@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-in-apps
+  name: obs-apps-in-apps
 spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   source:
     repoURL: https://github.com/cleanbeach/lokal-obs.git
-    path: env/dev/apps/
+    path: env/dev/apps/.
     targetRevision: main
     helm:
       valueFiles:
