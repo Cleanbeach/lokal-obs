@@ -1,0 +1,4 @@
+apiVersion: v2
+name: lokal-obs-apps
+description: en dummy chart
+version: 0.1.0
