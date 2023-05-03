@@ -13,7 +13,7 @@ spec:
     targetRevision: main
     helm:
       valueFiles:
-        - env/dev/apps/grafana/values.yaml
+        - grafana/values.yaml
         # - env/dev/apps/grafana-loki/values.yaml
         # - env/dev/apps/grafana-tempo/values.yaml
         # - env/dev/apps/grafana-mimir/values.yaml
